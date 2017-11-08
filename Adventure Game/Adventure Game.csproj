@@ -104,5 +104,32 @@
   <ItemGroup>
     <None Include="Resources\bdacea4eb922cfae8ebf56dde1c2c12e--creepy-things-bridges.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Acadia-Spooky-Woods-II.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ruyaveruya_ruyada-cukur-gormek-666x480.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tmpnull.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4586228f53f2ab93cae0281a683affa7.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Footsteps Walking-SoundBible.com-522653436.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\146.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white-room-closed-door-empty-35545491.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Applause-SoundBible.com-151138312.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

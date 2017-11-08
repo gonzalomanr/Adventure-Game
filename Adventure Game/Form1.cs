@@ -7,21 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
+using System.Threading;
 
 namespace Adventure_Game
 {
-    public partial class Form1 : Form
+    public partial class adventureTextGame : Form
     {
         int scene = 1;
 
         // random number generator
         Random randGen = new Random();
 
-        public Form1()
+        public adventureTextGame()
         {
             InitializeComponent();
 
             //display initial message and options
+            picturesLabel.Image = Properties.Resources._25549;
             outputLabel.Text = "You wake up in a mysterious place with lots of old trees, dark sky weird shadows and you can hear whispers. You see a light and an old car. The last you remember was drinking a lot in Mario's party \nWould you go to the light or investigate the car?";
             redLabel.Text = "Go to the light";
             blueLabel.Text = "Go to the car";
@@ -129,6 +132,8 @@ namespace Adventure_Game
                     break;
                 case 2:
                     picturesLabel.Image = Properties.Resources.chatillon_car_graveyard_abandoned_cars_cemetery_belgium_31;
+                    SoundPlayer player = new SoundPlayer(Properties.Resources.Footsteps_Walking_SoundBible_com_522653436);
+                    player.Play();
                     outputLabel.Text = "There is a lantern and a screwdriver, but you hear some steps behind you. \nWould you take the lantern or the screwdriver ? ";
                     redLabel.Text = "Pick the lantern";
                     blueLabel.Text = "Pick the screwdriver";
@@ -143,13 +148,13 @@ namespace Adventure_Game
                     break;
                 case 4:
                     picturesLabel.Image = Properties.Resources._1dae12354aea3992aa7e90478ac81a51;
-                    outputLabel.Text = "Nothing happened in the river, you are closer to the noise and the light. " + "\nWould you continue to the light or go where the noise come from ? ";
+                    outputLabel.Text = "Nothing happened in the river, you are closer to the noise and the light. " + "\nWould you continue to the light or go where the noise come from? ";
                     redLabel.Text = "Go to the light";
                     blueLabel.Text = "Go to the noise";
                     yellowLabel.Text = "";
                     break;
                 case 5:
-                    picturesLabel.Image = Properties.Resources._5gwDEpSj;
+                    picturesLabel.Image = Properties.Resources._4586228f53f2ab93cae0281a683affa7;
                     outputLabel.Text = "The black shadow jump to you and bite your neck before you can even react \nWould you like to play again?";
                     redLabel.Text = "Yes";
                     blueLabel.Text = "No";
@@ -170,94 +175,107 @@ namespace Adventure_Game
                     yellowLabel.Text = "Bridge";
                     break;
                 case 8:
-                    outputLabel.Text = "You found a key and you decided to keep it and then you start walking theway marked with little stones. You get to the end of the path and there's a hole but can't see anything inside \nWould you jump or look around ? ";
+                    picturesLabel.Image = Properties.Resources.Acadia_Spooky_Woods_II;
+                    outputLabel.Text = "You found a key and you decided to keep it and start walking through a path. You get to the end of the path and there's a hole but can't see anything inside \nWould you jump or look around? ";
                     redLabel.Text = "Jump";
                     blueLabel.Text = "Look around";
                     yellowLabel.Text = "";
                     break;
                 case 9:
-                    picturesLabel.Image = Properties.Resources._5gwDEpSj;
+                    picturesLabel.Image = Properties.Resources._4586228f53f2ab93cae0281a683affa7;
                     outputLabel.Text = "You fall off the bridge and sleep forever \nWould you like to play again?";
                     redLabel.Text = "Yes";
                     blueLabel.Text = "No";
                     yellowLabel.Text = "";
                     break;
                 case 10:
-                    outputLabel.Text = "You get to the end of the bridge and there's a hole but can't see anything inside\nWould you jump or look around ? ";
+                    picturesLabel.Image = Properties.Resources.tmpnull;
+                    outputLabel.Text = "You get to the end of the bridge and there's a hole but can't see anything inside\nWould you jump or look around? ";
                     redLabel.Text = "Jump";
                     blueLabel.Text = "Look around";
                     yellowLabel.Text = "";
                     break;
                 case 11:
-                    outputLabel.Text = "After avoiding the big hole, You get to the end of the path and there's a hole but can't see anything inside \nWould you jump or look around ? ";
+                    picturesLabel.Image = Properties.Resources.tmpnull;
+                    outputLabel.Text = "After avoiding the big gorge, You get to the end of the path and there's another hole but can't see anything inside \nWould you jump or look around ? ";
                     redLabel.Text = "Jump";
                     blueLabel.Text = "Look around";
                     yellowLabel.Text = "";
                     break;
                 case 12:
-                    outputLabel.Text = "You get to a white room with a door and nothing else, where you starve to death \nWould you like to play again?";
+                    picturesLabel.Image = Properties.Resources.white_room_closed_door_empty_35545491;
+                    outputLabel.Text = "You get to a white room with a locked door but you don't have anything to open it... you starve to death \nWould you like to play again?";
                     redLabel.Text = "Yes";
                     blueLabel.Text = "No";
                     yellowLabel.Text = "";
                     break;
                 case 13:
-                    picturesLabel.Image = Properties.Resources._5gwDEpSj;
-                    outputLabel.Text = "You start looking around but a big soul that crosses you and let you in the floor bleeding badly where you bleed out \nWould you like to play again?";
+                    picturesLabel.Image = Properties.Resources._4586228f53f2ab93cae0281a683affa7;
+                    outputLabel.Text = "You start looking around but a big soul bites you and let you in the floor bleeding badly where you bleed out \nWould you like to play again?";
                     redLabel.Text = "Yes";
                     blueLabel.Text = "No";
                     break;
                 case 14:
-                    outputLabel.Text = "You appear in a white room with a door and nothing else, and you open it with the key you picked before. Suddenly every thing is black but you open your eyes and you find yourself lay in a hospital bed with all your family around you, Well done! You wake from the coma \nYou can cry, say hello or ask to sleep 5 more minutes because you are tired, what would you do? ";
+                    picturesLabel.Image = Properties.Resources.white_room_closed_door_empty_35545491;
+                    Thread.Sleep(3000);
+                    player = new SoundPlayer(Properties.Resources.Applause_SoundBible_com_151138312);
+                    player.Play();
+                    outputLabel.Text = "You appear in a white room with a locked door, and you open it with the key you picked before. Suddenly every thing is black but you open your eyes and you find yourself lay in the hospital bed with all your family around you... Well done! You woke from the coma \nYou can cry, say hello or ask to sleep 5 more minutes because you are tired, what would you do? ";
                     redLabel.Text = "Cry";
                     blueLabel.Text = "Hello";
                     yellowLabel.Text = "Sleep";
                     break;
                 case 15:
-                    picturesLabel.Image = Properties.Resources._5gwDEpSj;
+                    picturesLabel.Image = Properties.Resources._4586228f53f2ab93cae0281a683affa7;
                     outputLabel.Text = "You died after two days in coma by alcohol poisoning \nWould you like to play again?";
                     redLabel.Text = "Yes";
                     blueLabel.Text = "No";
                     yellowLabel.Text = "";
                     break;
                 case 16:
-                    outputLabel.Text = "A strong wind start blocking you to continue while the screams sound closer \nDo you give up or still trying to continue?";
+                    picturesLabel.Image = Properties.Resources.download;
+                    outputLabel.Text = "A strong wind start blocking you to continue while the screams sound closer \nWould you give up or still trying to continue?";
                     redLabel.Text = "Give up";
                     blueLabel.Text = "Continue";
                     yellowLabel.Text = "";
                     break;
                 case 17:
-                    outputLabel.Text = "You get to a room with two rooms, one is red and the other is blue \nRed door or blue door?";
+                    picturesLabel.Image = Properties.Resources.download;
+                    outputLabel.Text = "You get to a room with two doors, one is red and the other is blue \nRed door or blue door?";
                     redLabel.Text = "Red door";
                     blueLabel.Text = "Blue door";
                     yellowLabel.Text = "";
                     break;
                 case 18:
-                    picturesLabel.Image = Properties.Resources._5gwDEpSj;
+                    picturesLabel.Image = Properties.Resources._4586228f53f2ab93cae0281a683affa7;
                     outputLabel.Text = "You fall forever \nWould you like to play again?";
                     redLabel.Text = "Yes";
                     blueLabel.Text = "No";
                     yellowLabel.Text = "";
                     break;
                 case 19:
+                    picturesLabel.Image = Properties.Resources.download;
                     outputLabel.Text = "You win! Do you want to play again?";
                     redLabel.Text = "Yes";
                     blueLabel.Text = "No";
                     yellowLabel.Text = "";
                     break;
                 case 20:
-                    picturesLabel.Image = Properties.Resources._5gwDEpSj;
+                    picturesLabel.Image = Properties.Resources._4586228f53f2ab93cae0281a683affa7;
                     outputLabel.Text = "The branch wasn't strong enough so you fall and don't wake up \nWould you like to play again?";
                     redLabel.Text = "Yes";
                     blueLabel.Text = "No";
                     yellowLabel.Text = "";
                     break;
                 case 21:
+                    picturesLabel.Image = Properties.Resources.download;
                     outputLabel.Text = "Thank you for playing!";
                     redLabel.Text = "";
                     blueLabel.Text = "";
                     yellowLabel.Text = "";
                     break;
                 default:
+                    picturesLabel.Image = Properties.Resources.download;
                     outputLabel.Text = "error";
                     break;
             }

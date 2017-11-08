@@ -93,9 +93,9 @@ namespace Adventure_Game.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _5gwDEpSj {
+        internal static System.Drawing.Bitmap _4586228f53f2ab93cae0281a683affa7 {
             get {
-                object obj = ResourceManager.GetObject("_5gwDEpSj", resourceCulture);
+                object obj = ResourceManager.GetObject("_4586228f53f2ab93cae0281a683affa7", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -107,6 +107,25 @@ namespace Adventure_Game.Properties {
             get {
                 object obj = ResourceManager.GetObject("_877345_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Acadia_Spooky_Woods_II {
+            get {
+                object obj = ResourceManager.GetObject("Acadia_Spooky_Woods_II", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Applause_SoundBible_com_151138312 {
+            get {
+                return ResourceManager.GetStream("Applause_SoundBible_com_151138312", resourceCulture);
             }
         }
         
@@ -133,9 +152,28 @@ namespace Adventure_Game.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap maxresdefault {
+        internal static System.Drawing.Bitmap download {
             get {
-                object obj = ResourceManager.GetObject("maxresdefault", resourceCulture);
+                object obj = ResourceManager.GetObject("download", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Footsteps_Walking_SoundBible_com_522653436 {
+            get {
+                return ResourceManager.GetStream("Footsteps_Walking_SoundBible_com_522653436", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ruyaveruya_ruyada_cukur_gormek_666x480 {
+            get {
+                object obj = ResourceManager.GetObject("ruyaveruya_ruyada_cukur_gormek_666x480", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -164,6 +202,26 @@ namespace Adventure_Game.Properties {
         internal static string String2 {
             get {
                 return ResourceManager.GetString("String2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tmpnull {
+            get {
+                object obj = ResourceManager.GetObject("tmpnull", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap white_room_closed_door_empty_35545491 {
+            get {
+                object obj = ResourceManager.GetObject("white_room_closed_door_empty_35545491", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
